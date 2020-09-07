@@ -4,7 +4,7 @@ import React, {useState, useEffect} from 'react';
 import {Helmet} from 'react-helmet';
 
 // TODO(slightlyoff): factor out common JSON parsing & caching of this file
-const DATA_URL = 'https://api.covid19india.org/website_data.json';
+const DATA_URL = 'https://mnrlive.github.io/api/website_data.json';
 
 function About() {
   const [faq, setFaq] = useState([]);
@@ -52,6 +52,7 @@ function About() {
               <h2
                 className="answer"
                 dangerouslySetInnerHTML={{__html: faq.answer}}
+                {faq.image}
               ></h2>
             </div>
           );
