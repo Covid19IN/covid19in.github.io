@@ -48,11 +48,11 @@ function About() {
               className="faq fadeInUp"
               style={{animationDelay: `${0.5 + index * 0.1}s`}}
             >
-              <h2 className="question">{faq.question}</h2>
-              <h2
-                className="answer"
+              <h2 className="question"
                 dangerouslySetInnerHTML={{__html: faq.answer}}
               ></h2>
+              <h2 className="answer">{faq.question}</h2>
+              
             </div>
           );
         })}
