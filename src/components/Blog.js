@@ -48,8 +48,8 @@ function Blog() {
               className="faq fadeInUp"
               style={{animationDelay: `${0.5 + index * 0.1}s`}}
             >
-              <h2 className="question">{faq.question}</h2>
-               <h1 className="question">{faq.image}</h1>
+              <h1 className="question">{faq.question}</h1>
+               <h3 className="question">{faq.image}</h3>
 
               <h2
                 className="answer"
