@@ -24,13 +24,13 @@ const Blog = () => {
   return (
 
      <div classname="Blog">
-     {recipes.map(faq,index) => (
+     {recipes.map((faq,index) => (
       <Recipe
       key={recipe.faq.question}
       title={recipe.faq.question}
       image={recipe.faq.image}
       />
-      ))}
+      )))}
       </div>
     );
 };
