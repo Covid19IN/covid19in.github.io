@@ -11,7 +11,7 @@ const Blog = () => {
 
       useEffect (() => {
          getRecipes();
-      }, [] );
+      }, []);
        
 
 
