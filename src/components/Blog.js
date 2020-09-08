@@ -24,7 +24,7 @@ const Blog = () => {
   return (
 
      <div classname="Blog">
-     {recipes.map(recipe => (
+     {recipes.map(faq => (
       <Recipe
       key={recipe.faq.question}
       title={recipe.faq.question}
