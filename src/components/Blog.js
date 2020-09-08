@@ -1,68 +1,46 @@
-import Footer from './Footer';
+import React,{ useEffect,useState } from 'react';
+import Recipe from './Recipe';
 
-import React, {useState, useEffect} from 'react';
-import {Helmet} from 'react-helmet';
 
-// TODO(slightlyoff): factor out common JSON parsing & caching of this file
-const DATA_URL = 'https://mnrlive.github.io/api/website_data.json';
 
-function Blog() {
-  const [faq, setFaq] = useState([]);
+const Blog = () => {
+      const APP_ID = "12345";
+      const APP_KEY = "1234567899555";
 
-  useEffect(() => {
-    getFAQs();
-  }, []);
+      const[recipes, setRecipes] = useState([]);
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+      useEffect (() => {
+         getRecipes();
+      }, [] );
+       
 
-  const getFAQs = () => {
-    fetch(DATA_URL)
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        setFaq(data.faq);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
+
+      const getRecipes = async () => {
+
+         const reponse = await fetch(
+          `https://mnrlive.github.io/api/website_data.json`
+          );
+      const data = await reponse.json();
+       setRecipes(data.hits);
+ };
 
   return (
-    <React.Fragment>
-      <Helmet>
-        <title>About - covid19india.org</title>
-        <meta
-          name="title"
-          content="Coronavirus Outbreak in India: Latest Map and Case Count"
-        />
-      </Helmet>
 
-      <div className="About">
-        {faq.map((faq, index) => {
-          return (
-            <div
-              key={index}
-              className="faq fadeInUp"
-              style={{animationDelay: `${0.5 + index * 0.1}s`}}
-            >
-              <h1 className="question">{faq.question}</h1>
-               <h3 className="question">{faq.image}</h3>
-
-              <h2
-                className="answer"
-                dangerouslySetInnerHTML={{__html: faq.answer}}
-              ></h2>
-            </div>
-          );
-        })}
+     <div classname="App">
+     </div>
+     {recipes.map(recipe =>(
+      <Recipe
+      key={recipe.faq.question}
+      title={recipe.faq.question}
+      calories={recipe.recipe.calories}
+      image={recipe.faq.image}
+      />
+      ))}
       </div>
 
-      <Footer />
-    </React.Fragment>
-  );
-}
+    );
+};
+
+
 
 export default Blog;
