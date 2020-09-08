@@ -34,7 +34,7 @@ const Blog = () => {
       />
       ))}
       </div>
-
+ <Footer />
     );
 };
 
