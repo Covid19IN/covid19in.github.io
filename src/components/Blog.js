@@ -27,7 +27,6 @@ const Blog = () => {
   return (
 
      <div classname="App">
-     </div>
      {recipes.map(recipe => (
       <Recipe
       key={recipe.faq.question}
