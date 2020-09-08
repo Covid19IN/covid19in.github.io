@@ -28,7 +28,6 @@ const Blog = () => {
       <Recipe
       key={recipe.faq.question}
       title={recipe.faq.question}
-      calories={recipe.recipe.calories}
       image={recipe.faq.image}
       />
       ))}
