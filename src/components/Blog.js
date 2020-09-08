@@ -4,9 +4,6 @@ import Recipe from './Recipe';
 
 
 const Blog = () => {
-      const APP_ID = "12345";
-      const APP_KEY = "1234567899555";
-
       const[recipes, setRecipes] = useState([]);
 
       useEffect (() => {
