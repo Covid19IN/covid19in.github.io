@@ -47,7 +47,7 @@ function Blog() {
               key={index}
               className="faq fadeInUp"
               style={{animationDelay: `${0.5 + index * 0.1}s`}}
-            >  <img src={faq.image} alt={faq.question} width="300"; />
+            >  <img className="image" src={faq.image} alt={faq.question} />
               <h2 className="answer">{faq.question}</h2>
 
                <h2
