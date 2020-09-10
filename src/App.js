@@ -1,5 +1,4 @@
 import './App.scss';
-import Blog from './components/Blog';
 import Navbar from './components/Navbar';
 
 import React, {lazy, useState, Suspense, useEffect} from 'react';
@@ -9,6 +8,7 @@ import useDarkMode from 'use-dark-mode';
 const Home = lazy(() => import('./components/Home'));
 const About = lazy(() => import('./components/About'));
 const State = lazy(() => import('./components/State'));
+const State = lazy(() => import('./components/Blog'));
 const LanguageSwitcher = lazy(() => import('./components/LanguageSwitcher'));
 
 const App = () => {
