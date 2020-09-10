@@ -47,7 +47,7 @@ function Blog() {
               key={index}
               className="faq fadeInUp"
               style={{animationDelay: `${0.5 + index * 0.1}s`}}
-            >  <img className={`countryCard__flagImg countryCard__flagImg--${country.alpha3Code}`} src={faq.image} alt={faq.question} />
+            >  <img src={faq.image} alt={faq.question} />
               <h2 className="answer">{faq.question}</h2>
 
                <h2
