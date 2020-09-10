@@ -51,7 +51,7 @@ function Blog() {
               <img className="image" src={faq.image} alt={faq.question} />
               <h2 className="answer">{faq.question}</h2>
 
-               <h2 <a href= {faq.answer} > {faq.question}</a> </h2>
+               <a href= {faq.answer} > {faq.question}</a>
               
         
               
