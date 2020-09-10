@@ -47,14 +47,12 @@ function Blog() {
               key={index}
               className="faq fadeInUp"
               style={{animationDelay: `${0.5 + index * 0.1}s`}}
-            >  <img className="image" src={faq.image} alt={faq.question} />
+            > 
+              <img className="image" src={faq.image} alt={faq.question} />
               <h2 className="answer">{faq.question}</h2>
 
-               <h2
-                className="question"
-                dangerouslySetInnerHTML={{__html: faq.answer}}
-                   ></h2>
-              <a href={faq.answer}=>{faq.question}</a>
+               <h2 <a href= {faq.answer} > {faq.question}</a> </h2>
+              
         
               
             </div>
