@@ -30,7 +30,7 @@ const App = () => {
       showInNavbar: true,
     },
     {
-      pageLink: '/about',
+      pageLink: '/About',
       view: About,
       displayName: 'About',
       showInNavbar: true,
