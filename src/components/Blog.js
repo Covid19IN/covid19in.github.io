@@ -1,5 +1,5 @@
 import Footer from './Footer';
-
+import { NavLink } from 'react-router-dom';
 import React, {useState, useEffect} from 'react';
 import {Helmet} from 'react-helmet';
 
@@ -44,12 +44,13 @@ function Blog() {
         {faq.map((faq, index) => {
           return (
             <div key={index} className="faq fadeInUp" style={{animationDelay: `${0.5 + index * 0.1}s`}} > 
+              <NavLink to={faq.answer} className="navLink" key={index}>
               <img className="image" src={faq.image} alt={faq.question} />
               
                <a href= {faq.answer} > {faq.question}</a>
               
         
-              
+              </NavLink>
             </div>
           );
         })}
