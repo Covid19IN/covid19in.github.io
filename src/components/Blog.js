@@ -43,11 +43,7 @@ function Blog() {
       <div className="About">
         {faq.map((faq, index) => {
           return (
-            <div
-              key={index}
-              className="faq fadeInUp"
-              style={{animationDelay: `${0.5 + index * 0.1}s`}}
-            > 
+            <div key={index} className="faq fadeInUp" style={{animationDelay: `${0.5 + index * 0.1}s`}} > 
               <img className="image" src={faq.image} alt={faq.question} />
               
                <a href= {faq.answer} > {faq.question}</a>
