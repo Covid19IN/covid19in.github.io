@@ -1,5 +1,6 @@
 import './App.scss';
 import Navbar from './components/Navbar';
+import BlogDetail from './components/BlogDetail';
 
 import React, {lazy, useState, Suspense, useEffect} from 'react';
 import {Route, Redirect, Switch, useLocation} from 'react-router-dom';
@@ -39,6 +40,12 @@ const App = () => {
       pageLink: '/state/:stateCode',
       view: State,
       displayName: 'State',
+      showInNavbar: false,
+    },
+    {
+      pageLink: '/BlogDetail/:answer',
+      view: State,
+      displayName: 'BlogDetail',
       showInNavbar: false,
     },
   ];
