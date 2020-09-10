@@ -49,8 +49,7 @@ function Blog() {
               style={{animationDelay: `${0.5 + index * 0.1}s`}}
             > 
               <img className="image" src={faq.image} alt={faq.question} />
-              <h2 className="answer">{faq.question}</h2>
-
+              
                <a href= {faq.answer} > {faq.question}</a>
               
         
