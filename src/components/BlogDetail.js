@@ -14,7 +14,7 @@ function BlogDetails({ match }) {
     const fetchItem = async () => {
         const fetchItem = await fetch(
             `https://fortnite-api.com/v2/cosmetics/br/${
-                match.params.id
+                match.params.answer
             }`
             );
         const item = await fetchItem.json();
