@@ -44,7 +44,7 @@ function Blog() {
         {faq.map((faq, index) => {
           return (
             <div key={index} className="faq fadeInUp" style={{animationDelay: `${0.5 + index * 0.1}s`}} > 
-              <NavLink to={`/Blog/${faq.answer}`} className="navLink" key={index}>
+              <NavLink to={`/Blog/${faq.answer}`} className="navLink" key={faq.answer}>
             
               <img className="image" src={faq.image} alt={faq.question} />
               
