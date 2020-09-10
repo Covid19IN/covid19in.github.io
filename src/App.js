@@ -24,7 +24,7 @@ const App = () => {
       showInNavbar: true,
     },
     {
-      pageLink: '/blog',
+      pageLink: '/Blog',
       view: Blog,
       displayName: 'Blog',
       showInNavbar: true,
