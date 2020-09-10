@@ -33,7 +33,7 @@ function Blog() {
   return (
     <React.Fragment>
       <Helmet>
-        <title>About - covid19india.org</title>
+        <title>News On Covid19</title>
         <meta
           name="title"
           content="Coronavirus Outbreak in India: Latest Map and Case Count"
@@ -54,11 +54,7 @@ function Blog() {
                 className="question"
                 dangerouslySetInnerHTML={{__html: faq.answer}}
                    ></h2>
-              <h2
-                className="question"
-                dangerouslySetInnerHTML={{__html: faq.image}}
-              
-              ></h2>
+              <a href={faq.answer}=>{faq.question}</a>
         
               
             </div>
