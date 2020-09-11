@@ -47,7 +47,7 @@ function Blog() {
                <a href= {faq.answer} > {faq.question}</a>
               
         
-              </NavLink>
+            
             </div>
           );
         })}
