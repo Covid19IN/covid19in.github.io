@@ -1,6 +1,5 @@
 import './App.scss';
 import Navbar from './components/Navbar';
-import BlogDetail from './components/BlogDetail';
 
 import React, {lazy, useState, Suspense, useEffect} from 'react';
 import {Route, Redirect, Switch, useLocation} from 'react-router-dom';
@@ -10,6 +9,7 @@ const Home = lazy(() => import('./components/Home'));
 const About = lazy(() => import('./components/About'));
 const State = lazy(() => import('./components/State'));
 const Blog = lazy(() => import('./components/Blog'));
+const BlogDetail = lazy(() => import('./components/BlogDetail'));
 const LanguageSwitcher = lazy(() => import('./components/LanguageSwitcher'));
 
 const App = () => {
