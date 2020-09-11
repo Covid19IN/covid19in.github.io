@@ -1,31 +1,60 @@
 import React, { useState, useEffect } from 'react';
 
-function BlogDetails({ match }) {
-       useEffect(() => {
-        fetchItem();
-        console.log(match);
-    }, []);
+/ TODO(slightlyoff): factor out common JSON parsing & caching of this file
+const DATA_URL = 'https://mnrlive.github.io/api/website_data.json';
 
-    const [item, setItem] = useState({
-        images: {}
-    });
+function Blog() {
+  const [faq, setFaq] = useState([]);
 
-    const fetchItem = async () => {
-        const fetchItem = await fetch(
-            `https://fortnite-api.com/v2/cosmetics/br/${
-                match.params.answer
-            }`
-            );
-        const item = await fetchItem.json();
-        setItem(item);
-        console.log(item);
-    };
+  useEffect(() => {
+    getFAQs();
+  }, []);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  const getFAQs = () => {
+    fetch(DATA_URL)
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        setFaq(data.faq);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   return (
-    <div>
-        <h1>{item.name}</h1>
-        <img src={item.images.transparent} alt="" />
-    </div>
+    <React.Fragment>
+      <Helmet>
+        <title>News On Covid19</title>
+        <meta
+          name="title"
+          content="Coronavirus Outbreak in India: Latest Map and Case Count"
+        />
+      </Helmet>
+
+      <div className="About">
+        {faq.map((faq, index) => {
+          return (
+            <div key={index} className="faq fadeInUp" style={{animationDelay: `${0.5 + index * 0.1}s`}} > 
+             
+              <img className="image" src={faq.image} alt={faq.question} />
+              
+               <a href= {faq.answer} > {faq.question}</a>
+              
+        
+              </NavLink>
+            </div>
+          );
+        })}
+      </div>
+
+      <Footer />
+    </React.Fragment>
   );
 }
 
