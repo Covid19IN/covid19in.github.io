@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-/ TODO(slightlyoff): factor out common JSON parsing & caching of this file
+// TODO(slightlyoff): factor out common JSON parsing & caching of this file
 const DATA_URL = 'https://mnrlive.github.io/api/website_data.json';
 
 function Blog() {
