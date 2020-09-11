@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import {Helmet} from 'react-helmet';
+import Footer from './Footer';
 
 // TODO(slightlyoff): factor out common JSON parsing & caching of this file
 const DATA_URL = 'https://mnrlive.github.io/api/website_data.json';
