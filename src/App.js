@@ -44,7 +44,7 @@ const App = () => {
     },
     {
       pageLink: '/BlogDetail/:answer',
-      view: State,
+      view: BlogDetail,
       displayName: 'BlogDetail',
       showInNavbar: false,
     },
