@@ -3,7 +3,7 @@ import {Helmet} from 'react-helmet';
 import Footer from './Footer';
 
 // TODO(slightlyoff): factor out common JSON parsing & caching of this file
-const DATA_URL = 'https://www.opengraph.xyz/.netlify/functions/metadata?url=${match.faq.answer}`';
+const DATA_URL = 'https://www.opengraph.xyz/.netlify/functions/metadata?url=${match.faq.answer}';
 
 function BlogDetail() {
   const [faq, setFaq] = useState([]);
