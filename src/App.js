@@ -9,7 +9,6 @@ const Home = lazy(() => import('./components/Home'));
 const About = lazy(() => import('./components/About'));
 const State = lazy(() => import('./components/State'));
 const Blog = lazy(() => import('./components/Blog'));
-const BlogDetail = lazy(() => import('./components/BlogDetail'));
 const LanguageSwitcher = lazy(() => import('./components/LanguageSwitcher'));
 
 const App = () => {
@@ -42,12 +41,7 @@ const App = () => {
       displayName: 'State',
       showInNavbar: false,
     },
-    {
-      pageLink: '/BlogDetail/:answer',
-      view: BlogDetail,
-      displayName: 'BlogDetail',
-      showInNavbar: false,
-    },
+    
   ];
 
   useEffect(() => {
